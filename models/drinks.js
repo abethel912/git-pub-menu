@@ -1,4 +1,4 @@
-const drinks = [
+let drinks = [
   {
     name: 'cruddy mary',
     price: 132,
@@ -42,3 +42,6 @@ const drinks = [
 ]
 
 module.exports = drinks;
+
+
+

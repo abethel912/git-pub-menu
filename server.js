@@ -5,8 +5,10 @@ const PORT = 3009;
 const drinks = require("./models/drinks.js");
 
 
-app.get('/drinks', (req, res) => {
-  res.render("drinks_index.ejs",)
+app.get('/drinks/', (request, response) => {
+  response.render('drinks_index.ejs', {
+    allDrinks: drinks
+  })
 })
 
 app.get("/", (req, res) => {
