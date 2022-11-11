@@ -4,10 +4,10 @@ const app = express();
 const PORT = 3009;
 const drinks = require("./models/drinks.js");
 
-app.get('/drinks/:id', (req, res) => {
-  res.send(req.params.id);
-});
 
+app.get("/", (req, res) => {
+  res.send('Welcome to the Gitpub App!')
+})
 
 app.get('/drinks/', (request, response) => {
   response.render('drinks_index.ejs', {
@@ -15,8 +15,10 @@ app.get('/drinks/', (request, response) => {
   })
 })
 
-app.get("/", (req, res) => {
-  res.send('Welcome to the Gitpub App!')
+app.get('/drinks/:id', (request, response) => {
+  response.render('drinks_show.ejs', {
+  allDrinks:drinks[request.params.id]
+  })
 })
 
 app.listen(PORT, () => {
