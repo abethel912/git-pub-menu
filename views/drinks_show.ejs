@@ -9,14 +9,13 @@
 </head>
 
 <body>
-  <h1>Welcome to gitPub!</h1>
-  <ul>
-    
-      <li>
-          <%=allDrinks.name.toUpperCase() %>
-      </li>
-  </ul>
-
+  <h1>At Foo Bar</h1>
+  <h2><%=allDrinks.name.toUpperCase() %>
+  <h3><%=allDrinks.price %></h3>
+  <img src="<%=allDrinks.image%>" alt="">
+  <br>
+  
+<a href="/drinks"><button>BACK</button></a>
   <style type="text/css">
     body {
       color: steelblue;
